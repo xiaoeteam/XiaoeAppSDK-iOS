@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		153B2549231E5F0D005C46FA /* XEShopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153B2548231E5F0D005C46FA /* XEShopSDK.framework */; };
+		15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C7C6BA22C9BCDD00EA639A /* WebKit.framework */; };
+		15D3930522C638D90083820B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3930422C638D90083820B /* AppDelegate.m */; };
+		15D3930D22C638DA0083820B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3930C22C638DA0083820B /* Assets.xcassets */; };
+		15D3931322C638DA0083820B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931222C638DA0083820B /* main.m */; };
+		15D3933122C639050083820B /* SwiftWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931D22C639050083820B /* SwiftWebViewController.swift */; };
+		15D3933222C639050083820B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931E22C639050083820B /* ViewController.m */; };
+		15D3933322C639050083820B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931F22C639050083820B /* WebViewController.m */; };
+		15D3933422C639050083820B /* XEHNGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932222C639050083820B /* XEHNGradientProgressView.m */; };
+		15D3933522C639050083820B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932722C639050083820B /* UserModel.m */; };
+		15D3933622C639050083820B /* XEUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932B22C639050083820B /* XEUIService.m */; };
+		15D3933822C639050083820B /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15D3932E22C639050083820B /* back@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		153B2548231E5F0D005C46FA /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
+		15C7C6BA22C9BCDD00EA639A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		15D3930022C638D90083820B /* XEShopSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEShopSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D3930322C638D90083820B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15D3930422C638D90083820B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15D3930C22C638DA0083820B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15D3931122C638DA0083820B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D3931222C638DA0083820B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15D3931D22C639050083820B /* SwiftWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebViewController.swift; sourceTree = "<group>"; };
+		15D3931E22C639050083820B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15D3931F22C639050083820B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		15D3932022C639050083820B /* XEHNGradientProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEHNGradientProgressView.h; sourceTree = "<group>"; };
+		15D3932122C639050083820B /* XEShopSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XEShopSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		15D3932222C639050083820B /* XEHNGradientProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEHNGradientProgressView.m; sourceTree = "<group>"; };
+		15D3932322C639050083820B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		15D3932422C639050083820B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		15D3932722C639050083820B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		15D3932822C639050083820B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		15D3932A22C639050083820B /* XEUIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEUIService.h; sourceTree = "<group>"; };
+		15D3932B22C639050083820B /* XEUIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEUIService.m; sourceTree = "<group>"; };
+		15D3932E22C639050083820B /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15D392FD22C638D90083820B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153B2549231E5F0D005C46FA /* XEShopSDK.framework in Frameworks */,
+				15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		153B2547231E5F0D005C46FA /* XEShopSDK */ = {
+			isa = PBXGroup;
+			children = (
+				153B2548231E5F0D005C46FA /* XEShopSDK.framework */,
+			);
+			path = XEShopSDK;
+			sourceTree = SOURCE_ROOT;
+		};
+		15C7C6B922C9BCDD00EA639A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C7C6BA22C9BCDD00EA639A /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15D392F722C638D90083820B = {
+			isa = PBXGroup;
+			children = (
+				15D3930222C638D90083820B /* XEShopSDKDemo */,
+				15D3930122C638D90083820B /* Products */,
+				15C7C6B922C9BCDD00EA639A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15D3930122C638D90083820B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15D3930022C638D90083820B /* XEShopSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15D3930222C638D90083820B /* XEShopSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				153B2547231E5F0D005C46FA /* XEShopSDK */,
+				15D3931B22C639050083820B /* Feature */,
+				15D3930322C638D90083820B /* AppDelegate.h */,
+				15D3930422C638D90083820B /* AppDelegate.m */,
+				15D3930C22C638DA0083820B /* Assets.xcassets */,
+				15D3931122C638DA0083820B /* Info.plist */,
+				15D3931222C638DA0083820B /* main.m */,
+			);
+			path = XEShopSDKDemo;
+			sourceTree = "<group>";
+		};
+		15D3931B22C639050083820B /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				15D3931C22C639050083820B /* Controller */,
+				15D3932522C639050083820B /* Model */,
+				15D3932922C639050083820B /* Service */,
+				15D3932C22C639050083820B /* Resource */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		15D3931C22C639050083820B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15D3931D22C639050083820B /* SwiftWebViewController.swift */,
+				15D3932322C639050083820B /* ViewController.h */,
+				15D3931E22C639050083820B /* ViewController.m */,
+				15D3932422C639050083820B /* WebViewController.h */,
+				15D3931F22C639050083820B /* WebViewController.m */,
+				15D3932022C639050083820B /* XEHNGradientProgressView.h */,
+				15D3932122C639050083820B /* XEShopSDKDemo-Bridging-Header.h */,
+				15D3932222C639050083820B /* XEHNGradientProgressView.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15D3932522C639050083820B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15D3932622C639050083820B /* UserModels */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15D3932622C639050083820B /* UserModels */ = {
+			isa = PBXGroup;
+			children = (
+				15D3932722C639050083820B /* UserModel.m */,
+				15D3932822C639050083820B /* UserModel.h */,
+			);
+			path = UserModels;
+			sourceTree = "<group>";
+		};
+		15D3932922C639050083820B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15D3932A22C639050083820B /* XEUIService.h */,
+				15D3932B22C639050083820B /* XEUIService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		15D3932C22C639050083820B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				15D3932E22C639050083820B /* back@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15D392FF22C638D90083820B /* XEShopSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D3931622C638DA0083820B /* Build configuration list for PBXNativeTarget "XEShopSDKDemo" */;
+			buildPhases = (
+				15D392FC22C638D90083820B /* Sources */,
+				15D392FD22C638D90083820B /* Frameworks */,
+				15D392FE22C638D90083820B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XEShopSDKDemo;
+			productName = XEShopSDKDemo;
+			productReference = 15D3930022C638D90083820B /* XEShopSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15D392F822C638D90083820B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = com.xiao;
+				TargetAttributes = {
+					15D392FF22C638D90083820B = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 15D392FB22C638D90083820B /* Build configuration list for PBXProject "XEShopSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15D392F722C638D90083820B;
+			productRefGroup = 15D3930122C638D90083820B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15D392FF22C638D90083820B /* XEShopSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15D392FE22C638D90083820B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D3933822C639050083820B /* back@3x.png in Resources */,
+				15D3930D22C638DA0083820B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15D392FC22C638D90083820B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D3933322C639050083820B /* WebViewController.m in Sources */,
+				15D3933122C639050083820B /* SwiftWebViewController.swift in Sources */,
+				15D3931322C638DA0083820B /* main.m in Sources */,
+				15D3933422C639050083820B /* XEHNGradientProgressView.m in Sources */,
+				15D3930522C638D90083820B /* AppDelegate.m in Sources */,
+				15D3933622C639050083820B /* XEUIService.m in Sources */,
+				15D3933522C639050083820B /* UserModel.m in Sources */,
+				15D3933222C639050083820B /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15D3931422C638DA0083820B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		15D3931522C638DA0083820B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15D3931722C638DA0083820B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K38D6P2E8H;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XEShopSDKDemo/XEShopSDK",
+					"$(PROJECT_DIR)/XEShopSDK",
+				);
+				INFOPLIST_FILE = XEShopSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XEShopSDKDemo/Feature/Controller/XEShopSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15D3931822C638DA0083820B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K38D6P2E8H;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XEShopSDKDemo/XEShopSDK",
+					"$(PROJECT_DIR)/XEShopSDK",
+				);
+				INFOPLIST_FILE = XEShopSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XEShopSDKDemo/Feature/Controller/XEShopSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15D392FB22C638D90083820B /* Build configuration list for PBXProject "XEShopSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D3931422C638DA0083820B /* Debug */,
+				15D3931522C638DA0083820B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D3931622C638DA0083820B /* Build configuration list for PBXNativeTarget "XEShopSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D3931722C638DA0083820B /* Debug */,
+				15D3931822C638DA0083820B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15D392F822C638D90083820B /* Project object */;
+}
