@@ -7,13 +7,13 @@
 
 ## 2. 接入
 
-#### 2.1 接入要求
+### 2.1 接入要求
 - iOS 9.0 或更高
 - Xcode 9.0 或更高版本（建议使用最新版本）
 
-#### 2.2 接入流程
+### 2.2 接入流程
 
-##### 2.2.1 引入 framework
+#### 2.2.1 引入 framework
 
 XEShopSDK.framework 加入到工程
 将对应的 framework 添加到 Embedded Binaries 中
@@ -29,7 +29,7 @@ XEShopSDK.framework 加入到工程
 ![-w700](./doc/15571099199426/15614529369883.jpg)
 
 
-##### 2.2.3 配置 app scheme（微信支付完成后跳转回App）
+#### 2.2.3 配置 app scheme（微信支付完成后跳转回App）
 
 ![-w700](./doc/15571099199426/15614530489724.jpg)
 
@@ -42,7 +42,7 @@ XEShopSDK.framework 加入到工程
 
 小鹅通 SDK 依托于 XEWebView 来进行页面展示. 类似 UIWebView, 传入店铺页面地址，就可以进行完整的商品展示购买流程。具体可参考 DEMO。
 
-#### 3.1 初始化 SDK
+### 3.1 初始化 SDK
 
 使用 SDK 前需要先初始化。
 
@@ -54,7 +54,7 @@ config.enableLog = NO; // 关闭 sdk 的 log 输出
 [XESDK.shared initializeSDKWithConfig:conf]; // 使用配置初始化 SDK
 ```
 
-#### 3.2 界面展示
+### 3.2 界面展示
 
 使用 XEWebView 来展示店铺界面
 
@@ -67,7 +67,7 @@ self.webView.noticeDelegate = self; // 实现代理方法，监听相关的通�
 [self.webView loadRequest:urlRequest];
 ```
 
-####3.3 登录态同步
+### 3.3 登录态同步
 
 当遇到需要登陆才可以访问的页面时，会触发下面的回调，此时去获取登录态信息，并同步给 SDK。
 
@@ -101,9 +101,9 @@ self.webView.noticeDelegate = self; // 实现代理方法，监听相关的通�
 }
 ```
 
-#### 3.4 认证
+### 3.4 认证
 
-##### 3.4.1 同步认证信息
+#### 3.4.1 同步认证信息
 
 登录后获取认证信息。
 同步给 SDK 的方法如下：
@@ -113,7 +113,7 @@ self.webView.noticeDelegate = self; // 实现代理方法，监听相关的通�
                    cookieValue:(nullable NSString *)value;
 ```
 
-#####3.4.2 清除认证信息
+#### 3.4.2 清除认证信息
 
 在三方 App 内发生用户切换或用户退出的时, 为了避免出现客户信息混乱, 请务必执行如下代码登出小鹅通用户角色.
 
@@ -122,7 +122,7 @@ self.webView.noticeDelegate = self; // 实现代理方法，监听相关的通�
 ```Objective-C
 - (void)logout;
 ```
-#### 3.5 页面分享
+### 3.5 页面分享
 
 如需要获取页面的分享信息, 需要调用 XEWebView 的 `-share `方法来触发分享事件：
 
@@ -134,7 +134,7 @@ self.webView.noticeDelegate = self; // 实现代理方法，监听相关的通�
 
 并不是所有可见页面都能触发分享. 没有回调则代表该页面不可分享。
 
-#### 3.6 日志开关
+### 3.6 日志开关
 
 SDK 提供了日志功能，默认日志为关闭状态. 开发者可以通过 XEConfig 中的设置打开日志开关.
 
