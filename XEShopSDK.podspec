@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.requires_arc = true
     
-    s.source       = { :git => 'git@github.com:xiaoeteam/XiaoeAppSDK-iOS.git', :tag => s.version}
+    s.source       = { :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => s.version}
 
     s.frameworks   = 'WebKit', 'UIKit', 'Foundation'
 
