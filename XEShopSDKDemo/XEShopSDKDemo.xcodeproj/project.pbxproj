@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		153B2549231E5F0D005C46FA /* XEShopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153B2548231E5F0D005C46FA /* XEShopSDK.framework */; };
 		15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C7C6BA22C9BCDD00EA639A /* WebKit.framework */; };
+		15D2E0B22372727100D43B8A /* XEShopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2E0B12372727100D43B8A /* XEShopSDK.framework */; };
 		15D3930522C638D90083820B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3930422C638D90083820B /* AppDelegate.m */; };
 		15D3930D22C638DA0083820B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3930C22C638DA0083820B /* Assets.xcassets */; };
 		15D3931322C638DA0083820B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931222C638DA0083820B /* main.m */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		153B2548231E5F0D005C46FA /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
 		15C7C6BA22C9BCDD00EA639A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		15D2E0B12372727100D43B8A /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
 		15D3930022C638D90083820B /* XEShopSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEShopSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D3930322C638D90083820B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15D3930422C638D90083820B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				153B2549231E5F0D005C46FA /* XEShopSDK.framework in Frameworks */,
+				15D2E0B22372727100D43B8A /* XEShopSDK.framework in Frameworks */,
 				15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,20 +58,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		153B2547231E5F0D005C46FA /* XEShopSDK */ = {
-			isa = PBXGroup;
-			children = (
-				153B2548231E5F0D005C46FA /* XEShopSDK.framework */,
-			);
-			path = XEShopSDK;
-			sourceTree = SOURCE_ROOT;
-		};
 		15C7C6B922C9BCDD00EA639A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				15C7C6BA22C9BCDD00EA639A /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15D2E0B02372727100D43B8A /* XEShopSDK */ = {
+			isa = PBXGroup;
+			children = (
+				15D2E0B12372727100D43B8A /* XEShopSDK.framework */,
+			);
+			name = XEShopSDK;
+			path = ../../XEShopSDK;
 			sourceTree = "<group>";
 		};
 		15D392F722C638D90083820B = {
@@ -94,7 +95,7 @@
 		15D3930222C638D90083820B /* XEShopSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				153B2547231E5F0D005C46FA /* XEShopSDK */,
+				15D2E0B02372727100D43B8A /* XEShopSDK */,
 				15D3931B22C639050083820B /* Feature */,
 				15D3930322C638D90083820B /* AppDelegate.h */,
 				15D3930422C638D90083820B /* AppDelegate.m */,
@@ -370,8 +371,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/XEShopSDKDemo/XEShopSDK",
-					"$(PROJECT_DIR)/XEShopSDK",
+					"\"$(SRCROOT)/../XEShopSDK\"",
 				);
 				INFOPLIST_FILE = XEShopSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -397,8 +397,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/XEShopSDKDemo/XEShopSDK",
-					"$(PROJECT_DIR)/XEShopSDK",
+					"\"$(SRCROOT)/../XEShopSDK\"",
 				);
 				INFOPLIST_FILE = XEShopSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
