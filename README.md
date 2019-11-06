@@ -17,21 +17,21 @@
 
 XEShopSDK.framework 加入到工程
 将对应的 framework 添加到 Embedded Binaries 中
-![-w550](./doc/15571099199426/15614525969737.jpg)
+![](http://doc.xiaoeknow.com/Public/Uploads/2019-11-01/5dbbdff65a7c7.png)
 
 
 ##### 2.2.2 配置 Info.plist 中的权限
 
 - 设置 Photo Privacy (用户更改头像)
-![-w700](./doc/15571099199426/15614527811975.jpg)
+![](http://doc.xiaoeknow.com/Public/Uploads/2019-11-01/5dbbe00de8620.png)
 
 - 设置 Schemes (付款需要用户打开微信)
-![-w700](./doc/15571099199426/15614529369883.jpg)
+![](http://doc.xiaoeknow.com/Public/Uploads/2019-11-01/5dbbe02c23063.png)
 
 
 #### 2.2.3 配置 app scheme（微信支付完成后跳转回App）
 
-![-w700](./doc/15571099199426/15614530489724.jpg)
+![](http://doc.xiaoeknow.com/Public/Uploads/2019-11-01/5dbbe03b2aed7.png)
 
 然后通过 XEConfig 将 scheme 传递给 SDK。
 
