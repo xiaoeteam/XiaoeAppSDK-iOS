@@ -25,4 +25,4 @@ https://github.com/xiaoeteam/XiaoeAppSDK-iOS/wiki
 
 ## License
 
-[MIT][LICENSE]
+[MIT](https://github.com/xiaoeteam/XiaoeAppSDK-iOS/blob/master/LICENSE)
