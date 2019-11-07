@@ -1,3 +1,6 @@
+[![Version](https://img.shields.io/cocoapods/v/XEShopSDK.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
+[![License](https://img.shields.io/cocoapods/l/PodDemo.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
+[![Platform](https://img.shields.io/cocoapods/p/PodDemo.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
 
 <p>
 <a href="https://github.com/xiaoeteam"><img alt="小鹅通logo" width="130px" src="https://www.xiaoe-tech.com/images/pageBase/logo_blue@2x.png" alt="xiaoe">
@@ -18,11 +21,11 @@
 
 将 XEShopSDK 文件夹中的内容添加到你的 Xcode 工程中。
 
-## 文档
+## 接入文档
 
 https://github.com/xiaoeteam/XiaoeAppSDK-iOS/wiki
 
 
 ## License
 
-[MIT][LICENSE]
+[MIT](https://github.com/xiaoeteam/XiaoeAppSDK-iOS/blob/master/LICENSE)
