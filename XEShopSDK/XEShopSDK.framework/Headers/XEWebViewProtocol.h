@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak, nullable) id<XEWebViewDelegate> delegate;
 
+@property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 /**
  webView 初始化请求

@@ -22,20 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (class, readonly, strong) XESDK *shared;
 
+
 /**
  SDK 配置
  */
 @property (nonatomic, readonly) XEConfig *config;
 
 /**
- 正在使用的 AccessToken
- */
-@property (nonatomic, readonly, nullable) NSString *accessToken;
-
-/**
  SDK 版本号
  */
-@property (nonatomic, readonly) NSString *version;
+@property (nonatomic, strong, readonly) NSString *version;
 
 /**
  初始化 SDK.
