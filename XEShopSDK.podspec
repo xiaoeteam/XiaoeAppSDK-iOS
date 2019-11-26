@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name         = 'XEShopSDK'
-    s.version      = '1.0.2'
+    s.version      = '1.0.4'
     s.summary      = 'An AppSDK for xiaoe-tech.com'
     s.homepage     = 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS'
     
