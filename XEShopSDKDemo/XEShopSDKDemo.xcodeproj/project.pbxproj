@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15AFAF42239A938200B97943 /* XEShopSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 15AFAF41239A938200B97943 /* XEShopSDK.podspec */; };
 		15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C7C6BA22C9BCDD00EA639A /* WebKit.framework */; };
 		15D2E0B22372727100D43B8A /* XEShopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2E0B12372727100D43B8A /* XEShopSDK.framework */; };
 		15D3930522C638D90083820B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3930422C638D90083820B /* AppDelegate.m */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15AFAF41239A938200B97943 /* XEShopSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XEShopSDK.podspec; path = ../../XEShopSDK.podspec; sourceTree = "<group>"; };
 		15C7C6BA22C9BCDD00EA639A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		15D2E0B12372727100D43B8A /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
 		15D3930022C638D90083820B /* XEShopSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEShopSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 		15D3930222C638D90083820B /* XEShopSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				15AFAF41239A938200B97943 /* XEShopSDK.podspec */,
 				15D2E0B02372727100D43B8A /* XEShopSDK */,
 				15D3931B22C639050083820B /* Feature */,
 				15D3930322C638D90083820B /* AppDelegate.h */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D3933822C639050083820B /* back@3x.png in Resources */,
+				15AFAF42239A938200B97943 /* XEShopSDK.podspec in Resources */,
 				15D3930D22C638DA0083820B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
