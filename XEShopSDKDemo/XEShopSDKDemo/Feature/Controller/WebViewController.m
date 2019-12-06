@@ -86,15 +86,6 @@
             [self showLoginView];
         }
             break;
-        case XENoticeTypeLogout:
-        {
-            // 登录通知
-            descString = @"登出通知";
-            NSLog(@"Notice: XENoticeTypeLogin");
-            
-            [self logout];
-        }
-            break;
             case XENoticeTypeShare:
         {
             // 接收到分享请求的结果回调
