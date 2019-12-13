@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, XENoticeType) {
     XENoticeTypeOther = 0,
     XENoticeTypeLogin,
-    XENoticeTypeLogout,
     XENoticeTypeShare,
     XENoticeTypeReady,
 };
