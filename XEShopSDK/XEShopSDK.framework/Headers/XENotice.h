@@ -17,12 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
  - XENoticeTypeLogin: 登录通知
  - XENoticeTypeShare: 接收到分享请求的结果回调
  - XENoticeTypeReady: Web页面已准备好，分享接口可用
+ - XENoticeTypeTitleChange：WebView  标题改变
  */
 typedef NS_ENUM(NSUInteger, XENoticeType) {
     XENoticeTypeOther = 0,
     XENoticeTypeLogin,
     XENoticeTypeShare,
     XENoticeTypeReady,
+    XENoticeTypeTitleChange
 };
 
 @interface XENotice : NSObject
