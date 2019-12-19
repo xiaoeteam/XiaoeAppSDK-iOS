@@ -30,16 +30,6 @@
     
 }
 
-+ (void)logoutWithOpenUid:(NSString *)openUID completionBlock:(void(^)(NSDictionary *info))completionBlock {
-    NSDictionary* params = @{@"app_user_id" : openUID};
-                             
-    NSURLRequest *request = [self requestWithURLString:@"https://app38itor341547.sdk.xiaoe-tech.com/sdk_api/xe.account.logout.test/1.0.0"
-                                            Parameters:params];
-    [self sendRequest:request completionBlock:completionBlock];
-    NSLog(@"url = %@", request.URL);
-    NSLog(@"params = %@", params);
-}
-
 
 + (void)sendRequest:(NSURLRequest *)request
     completionBlock:(void(^)(NSDictionary *info))completionBlock

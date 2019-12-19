@@ -70,13 +70,6 @@
     NSString *descString = [[NSString alloc] init];
     
     switch (notice.type) {
-            case XENoticeTypeOther:
-        {
-            // 其他通知，用户无需关心
-            descString = @"其他通知，用户无需关心";
-            NSLog(@"Notice: XENoticeTypeOther");
-        }
-            break;
             case XENoticeTypeLogin:
         {
             // 登录通知
@@ -222,10 +215,6 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-// 退出登录
-- (void)logout {
-    [XESDK.shared logout];
-}
 
 #pragma mark - Action
 
