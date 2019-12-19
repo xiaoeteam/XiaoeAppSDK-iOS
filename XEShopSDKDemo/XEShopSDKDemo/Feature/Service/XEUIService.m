@@ -14,9 +14,15 @@
 + (void)loginWithOpenUid:(NSString *)openUID
          completionBlock:(void(^)(NSDictionary *info))completionBlock
 {
-    NSDictionary *params = @{@"app_user_id" : openUID};
     
-    NSURLRequest *request = [self requestWithURLString:@"https://app38itor341547.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0"
+    NSDictionary *params = @{@"user_id" : openUID,
+                            @"app_user_id": openUID,
+                            @"sdk_app_id": @"883pzzGyzynE72G",
+                            @"app_id": @"app38itOR341547",
+                            @"secret_key": @"dfomGwT7JRWWnzY3okZ6yTkHtgNPTyhr"
+    };
+    
+    NSURLRequest *request = [self requestWithURLString:@"https://app38itOR341547.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0"
                                             Parameters:params];
     [self sendRequest:request completionBlock:completionBlock];
     NSLog(@"url = %@", request.URL);

@@ -78,21 +78,15 @@
  */
 - (void)logout
 {
-    __weak typeof(self) weakSelf = self;
-    [XEUIService logoutWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
-        if (resultInfo) {
-            
-            // SDK 退出登录 清除 Cookie 等信息
-            [XESDK.shared logout];
-            
-            // 退出登录
-            UserModel.shared.userId = nil;
-            
-            // 更新 BarItem
-            [weakSelf updateBarItem];
-            
-        }
-    }];
+    // SDK 退出登录 清除 Cookie 等信息
+    [XESDK.shared logout];
+    
+    // 退出登录
+    UserModel.shared.userId = nil;
+    
+    // 更新 BarItem
+    [self updateBarItem];
+    
 }
 
 #pragma mark - Private
@@ -213,7 +207,7 @@
         if (indexPath.row == 0) {
             WebViewController *vc = [[WebViewController alloc] init];
             // 店铺首页地址（更换自己的）
-            vc.loadUrlString = @"https://app38itor341547.sdk.xiaoe-tech.com/";
+            vc.loadUrlString = @"https://app38itOR341547.sdk.xiaoe-tech.com";
             vc.title = self.tableViewDataArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 1) {
