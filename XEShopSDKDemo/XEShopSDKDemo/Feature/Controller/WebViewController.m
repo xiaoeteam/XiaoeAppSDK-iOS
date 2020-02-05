@@ -106,6 +106,13 @@
             // 此时可以分享，但注意此事件并不作为是否可分享的标志事件
             self.navigationItem.rightBarButtonItem.enabled = YES;
         }
+        case XENoticeTypeTitleChange: { // 标题修改
+            NSDictionary *param = notice.response;
+            if ([param isKindOfClass:[NSDictionary class]]) {
+                NSString *title = param[@"title"];
+                self.navigationItem.title = title;
+            }
+        }
             break;
         default:
             break;
