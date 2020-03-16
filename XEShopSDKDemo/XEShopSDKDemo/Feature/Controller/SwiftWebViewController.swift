@@ -18,7 +18,7 @@ class SwiftWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = XEWebView(frame: view.frame, webViewType: .wkWebView)
+        webView = XEWebView(frame: view.frame)
         webView.delegate = self
         webView.noticeDelegate = self
         view.addSubview(webView)

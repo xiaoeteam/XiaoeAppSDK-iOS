@@ -45,7 +45,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     // 初始化 webView
-    self.webView = [[XEWebView alloc] initWithFrame:self.view.bounds webViewType:XEWebViewTypeWKWebView];
+    self.webView = [[XEWebView alloc] initWithFrame:self.view.bounds];
     self.webView.frame = self.view.bounds;
     self.webView.delegate = self;
     self.webView.noticeDelegate = self;

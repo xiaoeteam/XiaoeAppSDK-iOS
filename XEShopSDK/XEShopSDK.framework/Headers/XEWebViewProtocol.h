@@ -18,11 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-- (BOOL)webView:(id<XEWebView>)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 - (void)webViewDidStartLoad:(id<XEWebView>)webView;
 - (void)webViewDidFinishLoad:(id<XEWebView>)webView;
 - (void)webView:(id<XEWebView>)webView didFailLoadWithError:(NSError *)error;
-- (void)webViewWebContentProcessDidTerminate:(id<XEWebView>)webView;
 @optional
 
 @end
