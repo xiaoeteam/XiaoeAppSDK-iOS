@@ -22,9 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSString *clientId;
 
-/**
- APP 的 Scheme，设置后调用 HTML5 微信支付才能调转回您的 APP，例如：wechat
- */
 @property (nonatomic, strong) NSString *scheme;
 
 /**
