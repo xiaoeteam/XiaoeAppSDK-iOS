@@ -38,6 +38,8 @@
     self.logoutBarButton = [[UIBarButtonItem alloc] initWithTitle:@"退出登录" style:UIBarButtonItemStyleDone target:self action:@selector(showLogoutAlert)];
     
     [self setupTableView];
+    
+    [self loginWithUserId:@"xiaoe"];
 
 }
 
@@ -207,7 +209,7 @@
         if (indexPath.row == 0) {
             WebViewController *vc = [[WebViewController alloc] init];
             // 店铺首页地址（更换自己的）
-            vc.loadUrlString = @"https://app38itOR341547.sdk.xiaoe-tech.com";
+            vc.loadUrlString = @"https://app38itOR341547.h5.xiaoeknow.com";
             vc.title = self.tableViewDataArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 1) {

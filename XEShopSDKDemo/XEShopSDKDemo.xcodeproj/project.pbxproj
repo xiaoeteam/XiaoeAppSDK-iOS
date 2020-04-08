@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		15AFAF42239A938200B97943 /* XEShopSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 15AFAF41239A938200B97943 /* XEShopSDK.podspec */; };
 		15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C7C6BA22C9BCDD00EA639A /* WebKit.framework */; };
-		15D2E0B22372727100D43B8A /* XEShopSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D2E0B12372727100D43B8A /* XEShopSDK.framework */; };
 		15D3930522C638D90083820B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3930422C638D90083820B /* AppDelegate.m */; };
 		15D3930D22C638DA0083820B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3930C22C638DA0083820B /* Assets.xcassets */; };
 		15D3931322C638DA0083820B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931222C638DA0083820B /* main.m */; };
@@ -20,12 +19,12 @@
 		15D3933522C639050083820B /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932722C639050083820B /* UserModel.m */; };
 		15D3933622C639050083820B /* XEUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932B22C639050083820B /* XEUIService.m */; };
 		15D3933822C639050083820B /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15D3932E22C639050083820B /* back@3x.png */; };
+		319A6A131B0A3087559C101B /* Pods_XEShopSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265EC992F0D45790B9DCE032 /* Pods_XEShopSDKDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15AFAF41239A938200B97943 /* XEShopSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XEShopSDK.podspec; path = ../../XEShopSDK.podspec; sourceTree = "<group>"; };
 		15C7C6BA22C9BCDD00EA639A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		15D2E0B12372727100D43B8A /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
 		15D3930022C638D90083820B /* XEShopSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEShopSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D3930322C638D90083820B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15D3930422C638D90083820B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +44,9 @@
 		15D3932A22C639050083820B /* XEUIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEUIService.h; sourceTree = "<group>"; };
 		15D3932B22C639050083820B /* XEUIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XEUIService.m; sourceTree = "<group>"; };
 		15D3932E22C639050083820B /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		265EC992F0D45790B9DCE032 /* Pods_XEShopSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XEShopSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C89BA64B0F1283D4761D94DA /* Pods-XEShopSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XEShopSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-XEShopSDKDemo/Pods-XEShopSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C8DD7E33CE3620439E9B3692 /* Pods-XEShopSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XEShopSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-XEShopSDKDemo/Pods-XEShopSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D2E0B22372727100D43B8A /* XEShopSDK.framework in Frameworks */,
 				15C7C6BB22C9BCDD00EA639A /* WebKit.framework in Frameworks */,
+				319A6A131B0A3087559C101B /* Pods_XEShopSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,17 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				15C7C6BA22C9BCDD00EA639A /* WebKit.framework */,
+				265EC992F0D45790B9DCE032 /* Pods_XEShopSDKDemo.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		15D2E0B02372727100D43B8A /* XEShopSDK */ = {
-			isa = PBXGroup;
-			children = (
-				15D2E0B12372727100D43B8A /* XEShopSDK.framework */,
-			);
-			name = XEShopSDK;
-			path = ../../XEShopSDK;
 			sourceTree = "<group>";
 		};
 		15D392F722C638D90083820B = {
@@ -83,6 +77,7 @@
 				15D3930222C638D90083820B /* XEShopSDKDemo */,
 				15D3930122C638D90083820B /* Products */,
 				15C7C6B922C9BCDD00EA639A /* Frameworks */,
+				7DDCD4F43A3434F75172C7EC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				15AFAF41239A938200B97943 /* XEShopSDK.podspec */,
-				15D2E0B02372727100D43B8A /* XEShopSDK */,
 				15D3931B22C639050083820B /* Feature */,
 				15D3930322C638D90083820B /* AppDelegate.h */,
 				15D3930422C638D90083820B /* AppDelegate.m */,
@@ -169,6 +163,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		7DDCD4F43A3434F75172C7EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8DD7E33CE3620439E9B3692 /* Pods-XEShopSDKDemo.debug.xcconfig */,
+				C89BA64B0F1283D4761D94DA /* Pods-XEShopSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D3931622C638DA0083820B /* Build configuration list for PBXNativeTarget "XEShopSDKDemo" */;
 			buildPhases = (
+				418BF030C35B902D294A1816 /* [CP] Check Pods Manifest.lock */,
 				15D392FC22C638D90083820B /* Sources */,
 				15D392FD22C638D90083820B /* Frameworks */,
 				15D392FE22C638D90083820B /* Resources */,
+				DE60205B15B9CD6E9BA0F727 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +238,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		418BF030C35B902D294A1816 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XEShopSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE60205B15B9CD6E9BA0F727 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XEShopSDKDemo/Pods-XEShopSDKDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XEShopSDKDemo/Pods-XEShopSDKDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XEShopSDKDemo/Pods-XEShopSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15D392FC22C638D90083820B /* Sources */ = {
@@ -304,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -367,11 +414,13 @@
 		};
 		15D3931722C638DA0083820B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DD7E33CE3620439E9B3692 /* Pods-XEShopSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K38D6P2E8H;
+				DEVELOPMENT_TEAM = 7VCJ87V42T;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +435,7 @@
 				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XEShopSDKDemo/Feature/Controller/XEShopSDKDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,6 +444,7 @@
 		};
 		15D3931822C638DA0083820B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C89BA64B0F1283D4761D94DA /* Pods-XEShopSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

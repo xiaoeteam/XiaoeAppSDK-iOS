@@ -1,0 +1,6 @@
+framework module XEShopSDK {
+  umbrella header "XEShopSDK.h"
+
+  export *
+  module * { export * }
+}

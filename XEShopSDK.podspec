@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name         = 'XEShopSDK'
-    s.version      = '1.1.3'
+    s.version      = '2.0.0'
 
     s.summary      = 'An AppSDK for xiaoe-tech.com'
     s.homepage     = 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS'
@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
     s.frameworks   = 'WebKit', 'UIKit', 'Foundation'
 
     s.vendored_frameworks = 'XEShopSDK/*.framework'
+    s.resources = 'XEShopSDK/*.{bundle}'
 
     s.author       = { "pagehuang" => "pagehuang@xiaoe-tech.com " }
     s.license      = 'MIT'

@@ -18,16 +18,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *appId;
 
 /**
- 从小鹅通申请的 SDK 店铺应用 id
+ 从小鹅通申请的 client Id
  */
 @property (nonatomic, strong) NSString *clientId;
 
+/**
+ APP 的 Scheme，设置后调用 HTML5 支付后才能调转回您的 APP，例如：wechat
+ */
 @property (nonatomic, strong) NSString *scheme;
 
 /**
  是否开启控制台日志输出，默认为 NO（仅 Debug 模式下有效）
  */
 @property (nonatomic, assign) BOOL enableLog;
+
 
 /**
  初始化配置

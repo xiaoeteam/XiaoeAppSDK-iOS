@@ -1,15 +1,15 @@
 {
   "name": "XEShopSDK",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "summary": "An AppSDK for xiaoe-tech.com",
-  "homepage": "https://github.com/xiaoeappteam/XiaoeAppSDK-iOS",
+  "homepage": "https://github.com/xiaoeteam/XiaoeAppSDK-iOS",
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
   "source": {
-    "git": "git@github.com:xiaoeappteam/XiaoeAppSDK-iOS.git",
-    "tag": "1.0.2"
+    "git": "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git",
+    "tag": "2.0.0"
   },
   "frameworks": [
     "WebKit",
@@ -17,6 +17,7 @@
     "Foundation"
   ],
   "vendored_frameworks": "XEShopSDK/*.framework",
+  "resources": "XEShopSDK/*.{bundle}",
   "authors": {
     "pagehuang": "pagehuang@xiaoe-tech.com "
   },
