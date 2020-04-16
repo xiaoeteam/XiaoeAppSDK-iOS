@@ -8,6 +8,10 @@
 
 #import "XEUIService.h"
 
+#define clientId @"883pzzGyzynE72G" // 小鹅通申请的 client ID
+#define appId @"app38itOR341547" // 店铺 ID
+#define secretKey @"dfomGwT7JRWWnzY3okZ6yTkHtgNPTyhr" // 小鹅通申请的秘钥
+
 @implementation XEUIService
 
 
@@ -17,9 +21,9 @@
     
     NSDictionary *params = @{@"user_id" : openUID,
                             @"app_user_id": openUID,
-                            @"sdk_app_id": @"883pzzGyzynE72G",
-                            @"app_id": @"app38itOR341547",
-                            @"secret_key": @"dfomGwT7JRWWnzY3okZ6yTkHtgNPTyhr"
+                            @"sdk_app_id": clientId,
+                            @"app_id": appId,
+                            @"secret_key": secretKey
     };
     
     NSURLRequest *request = [self requestWithURLString:@"https://app38itOR341547.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0"

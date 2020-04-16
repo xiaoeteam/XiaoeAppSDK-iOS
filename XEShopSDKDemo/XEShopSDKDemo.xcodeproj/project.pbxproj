@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15AFAF41239A938200B97943 /* XEShopSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XEShopSDK.podspec; path = ../../XEShopSDK.podspec; sourceTree = "<group>"; };
+		15AFAF41239A938200B97943 /* XEShopSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XEShopSDK.podspec; path = ../../XEShopSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		15C7C6BA22C9BCDD00EA639A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		15D3930022C638D90083820B /* XEShopSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XEShopSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D3930322C638D90083820B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
