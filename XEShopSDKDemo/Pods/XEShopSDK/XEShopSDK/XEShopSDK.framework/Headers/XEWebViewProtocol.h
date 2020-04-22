@@ -27,12 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XEWebView <NSObject>
 
+@property (nonatomic, strong, readonly) NSString *title;
+@property (nonatomic, strong, readonly) UIScrollView *scrollView;
+
 /**
  监听 XENotice，收到通知做相应的操作
  */
 @property (nonatomic, weak, nullable) id<XEWebViewDelegate> delegate;
 
-@property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 /**
  webView 初始化请求
@@ -100,15 +102,6 @@ NS_ASSUME_NONNULL_BEGIN
  进入下一页
  */
 - (void)goForward;
-
-
-/**
- 执行 JavaScript 字符串
-
- @param javaSriptString JavaScripte 字符串
- @return 结果
- */
-- (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)javaSriptString;
 
 /**
  执行 JavaScript 字符串，和完成回调

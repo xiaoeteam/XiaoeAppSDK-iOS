@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  通知类型枚举
 
- - XENoticeTypeOther: 其他通知，用户无需关心
  - XENoticeTypeLogin: 登录通知
  - XENoticeTypeShare: 接收到分享请求的结果回调
  - XENoticeTypeReady: Web页面已准备好，分享接口可用
@@ -25,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 typedef NS_ENUM(NSUInteger, XENoticeType) {
-    XENoticeTypeOther = 0,
     XENoticeTypeLogin,
     XENoticeTypeShare,
     XENoticeTypeReady,
