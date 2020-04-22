@@ -1,0 +1,16 @@
+PODS:
+  - XEShopSDK (2.0.2)
+
+DEPENDENCIES:
+  - XEShopSDK (from `../`)
+
+EXTERNAL SOURCES:
+  XEShopSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XEShopSDK: 545e0870b4abc33b9224793eef98ae772bfd7cbf
+
+PODFILE CHECKSUM: 95ed2b79849959ddc4b44d11378ffddb314bbd07
+
+COCOAPODS: 1.8.3
