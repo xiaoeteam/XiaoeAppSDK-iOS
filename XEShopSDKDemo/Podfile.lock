@@ -1,5 +1,5 @@
 PODS:
-  - XEShopSDK (2.0.2)
+  - XEShopSDK (2.0.3)
 
 DEPENDENCIES:
   - XEShopSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XEShopSDK: 545e0870b4abc33b9224793eef98ae772bfd7cbf
+  XEShopSDK: 6d25acf533b89ece8927350660cea1120d10eac4
 
 PODFILE CHECKSUM: 95ed2b79849959ddc4b44d11378ffddb314bbd07
 

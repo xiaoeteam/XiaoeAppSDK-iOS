@@ -1,6 +1,6 @@
 {
   "name": "XEShopSDK",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "summary": "An AppSDK for xiaoe-tech.com",
   "homepage": "https://github.com/xiaoeteam/XiaoeAppSDK-iOS",
   "platforms": {
@@ -9,7 +9,7 @@
   "requires_arc": true,
   "source": {
     "git": "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git",
-    "tag": "2.0.2"
+    "tag": "2.0.3"
   },
   "frameworks": [
     "WebKit",
