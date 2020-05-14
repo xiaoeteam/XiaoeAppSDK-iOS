@@ -15,7 +15,7 @@
 
 ### 通过 CocoaPods 安装
 
-1. 在你的 Podfile 文件中添加 pod 'XEShopSDK','2.0.3'
+1. 在你的 Podfile 文件中添加 pod 'XEShopSDK','2.0.4'
 2. 在命令行中运行 pod install 或 pod update.
 
 ### 手动导入
