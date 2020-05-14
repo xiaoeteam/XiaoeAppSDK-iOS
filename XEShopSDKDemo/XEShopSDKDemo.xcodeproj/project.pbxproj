@@ -11,7 +11,6 @@
 		15D3930522C638D90083820B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3930422C638D90083820B /* AppDelegate.m */; };
 		15D3930D22C638DA0083820B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3930C22C638DA0083820B /* Assets.xcassets */; };
 		15D3931322C638DA0083820B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931222C638DA0083820B /* main.m */; };
-		15D3933122C639050083820B /* SwiftWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931D22C639050083820B /* SwiftWebViewController.swift */; };
 		15D3933222C639050083820B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931E22C639050083820B /* ViewController.m */; };
 		15D3933322C639050083820B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3931F22C639050083820B /* WebViewController.m */; };
 		15D3933422C639050083820B /* XEHNGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3932222C639050083820B /* XEHNGradientProgressView.m */; };
@@ -30,7 +29,6 @@
 		15D3930C22C638DA0083820B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D3931122C638DA0083820B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D3931222C638DA0083820B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		15D3931D22C639050083820B /* SwiftWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWebViewController.swift; sourceTree = "<group>"; };
 		15D3931E22C639050083820B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		15D3931F22C639050083820B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		15D3932022C639050083820B /* XEHNGradientProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XEHNGradientProgressView.h; sourceTree = "<group>"; };
@@ -46,6 +44,7 @@
 		265EC992F0D45790B9DCE032 /* Pods_XEShopSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XEShopSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51797B5E2450275E0008B3B2 /* XEShopSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XEShopSDK.framework; sourceTree = "<group>"; };
 		51797B5F2450275E0008B3B2 /* XEShopSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XEShopSDK.bundle; sourceTree = "<group>"; };
+		5179ED6B246CEEE60008B343 /* XEShopSDKDemoMaro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XEShopSDKDemoMaro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +93,7 @@
 				15D3931B22C639050083820B /* Feature */,
 				15D3930322C638D90083820B /* AppDelegate.h */,
 				15D3930422C638D90083820B /* AppDelegate.m */,
+				5179ED6B246CEEE60008B343 /* XEShopSDKDemoMaro.h */,
 				15D3930C22C638DA0083820B /* Assets.xcassets */,
 				15D3931122C638DA0083820B /* Info.plist */,
 				15D3931222C638DA0083820B /* main.m */,
@@ -115,7 +115,6 @@
 		15D3931C22C639050083820B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15D3931D22C639050083820B /* SwiftWebViewController.swift */,
 				15D3932322C639050083820B /* ViewController.h */,
 				15D3931E22C639050083820B /* ViewController.m */,
 				15D3932422C639050083820B /* WebViewController.h */,
@@ -138,8 +137,8 @@
 		15D3932622C639050083820B /* UserModels */ = {
 			isa = PBXGroup;
 			children = (
-				15D3932722C639050083820B /* UserModel.m */,
 				15D3932822C639050083820B /* UserModel.h */,
+				15D3932722C639050083820B /* UserModel.m */,
 			);
 			path = UserModels;
 			sourceTree = "<group>";
@@ -250,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D3933322C639050083820B /* WebViewController.m in Sources */,
-				15D3933122C639050083820B /* SwiftWebViewController.swift in Sources */,
 				15D3931322C638DA0083820B /* main.m in Sources */,
 				15D3933422C639050083820B /* XEHNGradientProgressView.m in Sources */,
 				15D3930522C638D90083820B /* AppDelegate.m in Sources */,
@@ -394,7 +392,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -422,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XEShopSDKDemo/Feature/Controller/XEShopSDKDemo-Bridging-Header.h";

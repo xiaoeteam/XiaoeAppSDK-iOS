@@ -10,8 +10,8 @@
 #import "WebViewController.h"
 #import "UserModel.h"
 #import "XEUIService.h"
-#import "XEShopSDKDemo-Swift.h"
 #import <XEShopSDK/XEShopSDK.h>
+#import "XEShopSDKDemoMaro.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -59,8 +59,16 @@
  */
 - (void)loginWithUserId:(NSString *)userId
 {
+    /**
+    获取登录态 token（仅作测试使用）
+    注意：该登录态获取接口仅作为小鹅内嵌课堂SDK的官方Demo测试使用，
+       正式对接时，你应该请求贵方的APP服务端后台封装的正式登录态接口获取数据,
+    
+    @param openUID  APP登录用户唯一码
+    @param completionBlock 回调
+    */
+    
     UserModel.shared.userId = userId;
-    // 登录方法(在你使用时，应该换成自己服务器给的接口来获取cookie)
     __weak typeof(self) weakSelf = self;
     [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
         if (resultInfo) {
@@ -106,7 +114,7 @@
  */
 - (void)setupTableView
 {
-    self.tableViewDataArray = @[@"演示 Demo", @"Swift 演示 Demo"];
+    self.tableViewDataArray = @[@"演示 Demo"];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -208,12 +216,8 @@
         
         if (indexPath.row == 0) {
             WebViewController *vc = [[WebViewController alloc] init];
-            // 店铺首页地址（更换自己的）
-            vc.loadUrlString = @"https://app38itOR341547.h5.xiaoeknow.com";
-            vc.title = self.tableViewDataArray[indexPath.row];
-            [self.navigationController pushViewController:vc animated:YES];
-        } else if (indexPath.row == 1) {
-            SwiftWebViewController *vc = [[SwiftWebViewController alloc] init];
+            // 配置对应店铺想要进入的链接（可从小鹅店铺管理台拷贝相关链接（店铺主页、单个课程、微页面等））
+            vc.loadUrlString = DefaultSourceUrl;
             vc.title = self.tableViewDataArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         } 
