@@ -393,6 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.4;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -421,6 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.4;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoe-tech.xeshopsdk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XEShopSDKDemo/Feature/Controller/XEShopSDKDemo-Bridging-Header.h";
