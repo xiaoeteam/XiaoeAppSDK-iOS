@@ -12,6 +12,13 @@
 #import "XEHNGradientProgressView.h"
 #import <XEShopSDK/XEShopSDK.h>
 
+#define IPHONEX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
 @interface WebViewController () <XEWebViewDelegate, XEWebViewNoticeDelegate>
 
 // 网页
@@ -48,8 +55,17 @@
      初始化小鹅内嵌课堂H5展示容器XEWebView （必须依附XEWebView容器）
      小鹅内嵌课堂H5展示区域通过控制XEWebView的Frame即可（APP端按需处理）
      （APP端接入时注意自身Y坐标兼容控制，避免被APP端本身导航条盖住网页顶部）
+     注意：刘海屏 iPhone  需要配置与底部为 35 的安全距离
      */
-    self.webView = [[XEWebView alloc] initWithFrame:self.view.bounds];
+    
+    CGRect webFrame = self.view.bounds;
+    
+    // 注意：刘海屏 iPhone 需要配置与底部为 35 的安全距离
+    if (IPHONEX) {
+        webFrame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 35);
+    }
+    
+    self.webView = [[XEWebView alloc] initWithFrame:webFrame];
     self.webView.delegate = self;
     self.webView.noticeDelegate = self;
     [self.view addSubview:self.webView];
