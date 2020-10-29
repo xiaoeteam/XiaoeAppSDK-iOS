@@ -61,9 +61,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     CGRect webFrame = self.view.bounds;
     
     // 注意：刘海屏 iPhone 需要配置与底部为 35 的安全距离
-    if (IPHONEX) {
-        webFrame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height - 35);
-    }
+    CGFloat navHeight = IPHONEX ? 88 : 64;
+    CGFloat bottom = IPHONEX ? 35 : 0;
+    webFrame = CGRectMake(self.view.bounds.origin.x, navHeight, self.view.bounds.size.width, self.view.bounds.size.height - navHeight - bottom);
     
     self.webView = [[XEWebView alloc] initWithFrame:webFrame];
     self.webView.delegate = self;
