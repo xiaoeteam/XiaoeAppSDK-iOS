@@ -144,6 +144,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             // 外部链接回调，APP端按需处理，规则为带参数 needoutlink=1 的链接,例：https://xiaoe-tech.com/?needoutlink=1
             NSDictionary *param = notice.response;
             NSLog(@"自定义链接: %@", param);
+            [self showAlertTitle:param[@"out_link_url"] content: nil];
         }
             break;
         default:
