@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
     
     s.name         = 'XEShopSDK'
-    s.version      = '2.2.3'
+    s.version      = '2.2.4'
 
     s.summary      = 'An AppSDK for xiaoe-tech.com'
     s.homepage     = 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS'
     
-    s.platform     = :ios, '9.0'
-    s.ios.deployment_target = '9.0'
+    s.platform     = :ios, '8.0'
+    s.ios.deployment_target = '8.0'
     s.requires_arc = true
     
     s.source       = { :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => s.version}
