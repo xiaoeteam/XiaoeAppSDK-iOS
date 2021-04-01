@@ -31,10 +31,8 @@
     XEConfig *config = [[XEConfig alloc] initWithClientId:DefaultClientId appId: DefaultAppId];
     // 关闭 SDK 日志输出
     config.enableLog = YES;
-    // 配置 Scheme 以便微信支付完成后跳转返回
-    // CFBundleURLSchemes （URL Schemes）固定设置为h5-pay.sdk.xiaoe-tech.com
-    // CFBundleURLName （Identifier）设置的值初始化为下方所填值保持一致
-    config.scheme = @"XEShopSDKDemo"; // 你在Info.plist设置的CFBundleURLName （Identifier）值
+    // 配置你app独立的 Scheme 以便微信支付完成后跳转返回
+    config.scheme = @"app-unique-scheme";
     // 初始化SDK
     [XESDK.shared initializeSDKWithConfig:config];
 

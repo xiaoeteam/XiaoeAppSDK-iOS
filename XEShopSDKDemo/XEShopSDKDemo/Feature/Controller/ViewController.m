@@ -40,6 +40,14 @@
     [self setupTableView];
     
     [self loginWithUserId:@"xiaoe"];
+    
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-150, self.view.frame.size.width, 100)];
+    label.font = [UIFont systemFontOfSize:20];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = UIColor.redColor;
+    [self.view addSubview:label];
+    label.text = [NSString stringWithFormat:@"当前SDK版本：V%@",XESDK.shared.version];
 
 }
 
