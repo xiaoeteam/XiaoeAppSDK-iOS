@@ -33,7 +33,7 @@
 			<string>XEShopSDKDemo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>h5-pay.sdk.xiaoe-tech.com</string>
+				<string>app-unique-scheme</string>
 			</array>
 		</dict>
 	</array>

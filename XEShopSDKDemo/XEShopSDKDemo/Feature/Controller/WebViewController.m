@@ -12,6 +12,13 @@
 #import "XEHNGradientProgressView.h"
 #import <XEShopSDK/XEShopSDK.h>
 
+#define IPHONEX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
 @interface WebViewController () <XEWebViewDelegate, XEWebViewNoticeDelegate>
 
 // 网页
@@ -44,9 +51,21 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // 初始化 webView
-    self.webView = [[XEWebView alloc] initWithFrame:self.view.bounds];
-    self.webView.frame = self.view.bounds;
+    /**
+     初始化小鹅内嵌课堂H5展示容器XEWebView （必须依附XEWebView容器）
+     小鹅内嵌课堂H5展示区域通过控制XEWebView的Frame即可（APP端按需处理）
+     （APP端接入时注意自身Y坐标兼容控制，避免被APP端本身导航条盖住网页顶部）
+     注意：刘海屏 iPhone  需要配置与底部为 35 的安全距离
+     */
+    
+    CGRect webFrame = self.view.bounds;
+    
+    // 注意：刘海屏 iPhone 需要配置与底部为 35 的安全距离
+    CGFloat navHeight = IPHONEX ? 88 : 64;
+    CGFloat bottom = IPHONEX ? 35 : 0;
+    webFrame = CGRectMake(self.view.bounds.origin.x, navHeight, self.view.bounds.size.width, self.view.bounds.size.height - navHeight - bottom);
+    
+    self.webView = [[XEWebView alloc] initWithFrame:webFrame];
     self.webView.delegate = self;
     self.webView.noticeDelegate = self;
     [self.view addSubview:self.webView];
@@ -56,33 +75,45 @@
     self.navigationItem.rightBarButtonItems = @[self.shareItem, self.reloadItem];
     self.navigationItem.rightBarButtonItem.enabled = NO;//默认分享按钮不可用
     
-    // 加载请求
+    // 加载网页请求
     [self loadAndLoadUrl:self.loadUrlString];
     
 }
 
+#pragma mark - 网页请求  (SDK网页请求-必须接入)
+
+/// 加载 URL
+- (void)loadAndLoadUrl:(NSString *)urlString
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self.webView loadRequest:request];
+}
 
 
-#pragma mark - XEWebViewNotice Delegate
+#pragma mark - XEWebViewNotice Delegate  (SDK代理回调-必须接入)
 
 - (void)webView:(id<XEWebView>)webView didReceiveNotice:(XENotice *)notice
 {
-    NSString *descString = [[NSString alloc] init];
-    
     switch (notice.type) {
-            case XENoticeTypeLogin:
+        case XENoticeTypeReady:
         {
-            // 登录通知
-            descString = @"登录通知";
-            NSLog(@"Notice: XENoticeTypeLogin");
+            // Web页面加载完成回调，APP端按需处理
             
+            // 例如：此时可以分享，但注意此事件并不作为是否可分享的标志事件
+            self.navigationItem.rightBarButtonItem.enabled = YES;
+        }
+            break;
+        case XENoticeTypeLogin:
+        {
+            // SDK需要登录态通知回调 （APP端需要接入小鹅登录态API流程）
+            // 小鹅登录态接入流程文档 https://admin.xiaoe-tech.com/helpCenter/problem?first_id=241&second_id=242&document_id=doc_5dca0f61d8b1c_jYm6p
             [self showLoginView];
         }
             break;
-            case XENoticeTypeShare:
+        case XENoticeTypeShare:
         {
-            // 接收到分享请求的结果回调
-            descString = @"分享";
+            // 当前网页分享内容结果回调 （需先触发webview的share方法）
+          
             NSDictionary *dict = (NSDictionary *)notice.response;
             NSString *content = [[NSString alloc] initWithFormat:@"%@", dict];
             [self showAlertTitle: @"分享信息" content: content];
@@ -97,17 +128,10 @@
             }
         }
             break;
-            case XENoticeTypeReady:
+        
+        case XENoticeTypeTitleChange:
         {
-            // Web页面已准备好，分享接口可用
-            descString = @"Web页面已准备好，分享接口可用";
-            NSLog(@"Notice: XENoticeTypeReady");
-            
-            // 此时可以分享，但注意此事件并不作为是否可分享的标志事件
-            self.navigationItem.rightBarButtonItem.enabled = YES;
-        }
-            break;
-        case XENoticeTypeTitleChange: { // 标题修改
+            // 网页标题改变回调，APP端按需处理
             NSDictionary *param = notice.response;
             if ([param isKindOfClass:[NSDictionary class]]) {
                 NSString *title = param[@"title"];
@@ -115,9 +139,12 @@
             }
         }
             break;
-        case XENoticeTypeOutLinkUrl: { // 自定义链接
+        case XENoticeTypeOutLinkUrl:
+        {
+            // 外部链接回调，APP端按需处理，规则为带参数 needoutlink=1 的链接,例：https://xiaoe-tech.com/?needoutlink=1
             NSDictionary *param = notice.response;
             NSLog(@"自定义链接: %@", param);
+            [self showAlertTitle:param[@"out_link_url"] content: nil];
         }
             break;
         default:
@@ -125,7 +152,7 @@
     }
 }
 
-#pragma mark - XEWebViewDelegate Delegate (可选)
+#pragma mark - XEWebViewDelegate Delegate (SDK代理回调-可选接入)
 
 - (BOOL)webView:(id<XEWebView>)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
@@ -153,14 +180,53 @@
     
 }
 
-#pragma mark - Action
+
+#pragma mark - XEWebViewNotice Delegate  (SDK其它功能-可选接入)
+/**
+ 点击刷新按钮
+ */
+- (void)onClickRefresh
+{
+    [self.webView reload];
+}
+
+/**
+ 点击分享按钮
+ */
+- (void)onClickShare
+{
+    [self.webView share];
+}
+
+/**
+ 点击返回按钮
+ */
+- (void)onClickBack
+{
+    if ([self.webView canGoBack]) {
+        [self.webView goBack];
+        self.navigationItem.leftBarButtonItems = @[self.backItem, self.closeItem];
+    } else {
+        [self onClickClose];
+    }
+}
+
+
+#pragma mark - 以下为APP端自身业务处理 ，按需处理
+
 
 - (void)loginWithUserId:(NSString *)userId
 {
-    UserModel.shared.userId = userId;
     /**
-     登录方法(在你使用时，应该换成自己服务器给的接口来获取cookie)
-     */
+    获取登录态 token（仅作测试使用）
+    注意：该登录态获取接口仅作为小鹅内嵌课堂SDK的官方Demo测试使用，
+       正式对接时，你应该请求贵方的APP服务端后台封装的正式登录态接口获取数据,
+    
+    @param openUID  APP登录用户唯一码
+    @param completionBlock 回调
+    */
+    
+    UserModel.shared.userId = userId;
     __weak typeof(self) weakSelf = self;
     [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
         if (resultInfo) {
@@ -171,16 +237,6 @@
         }
     }];
 }
-
-#pragma mark - Private
-
-/// 加载 URL
-- (void)loadAndLoadUrl:(NSString *)urlString
-{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    [self.webView loadRequest:request];
-}
-
 
 /// 分享弹窗
 - (void)showAlertTitle:(NSString *)title content:(NSString *)content
@@ -226,38 +282,6 @@
     [alertController addAction:action];
     [alertController addAction:action_cancel];
     [self presentViewController:alertController animated:YES completion:nil];
-}
-
-
-#pragma mark - Action
-
-/**
- 点击刷新按钮
- */
-- (void)onClickRefresh
-{
-    [self.webView reload];
-}
-
-/**
- 点击分享按钮
- */
-- (void)onClickShare
-{
-    [self.webView share];
-}
-
-/**
- 点击返回按钮
- */
-- (void)onClickBack
-{
-    if ([self.webView canGoBack]) {
-        [self.webView goBack];
-        self.navigationItem.leftBarButtonItems = @[self.backItem, self.closeItem];
-    } else {
-        [self onClickClose];
-    }
 }
 
 /**
@@ -322,9 +346,9 @@
 - (XEHNGradientProgressView *)progressView
 {
     if (!_progressView) {
-        _progressView = [[XEHNGradientProgressView alloc] initWithFrame:CGRectMake(0, [self kNavBarHeight], [UIScreen mainScreen].bounds.size.width, 1)];
+        _progressView = [[XEHNGradientProgressView alloc] initWithFrame:CGRectMake(0, [self kNavBarHeight], [UIScreen mainScreen].bounds.size.width, 3)];
         _progressView.bgProgressColor = [UIColor whiteColor];
-        _progressView.colorArr = @[(id)[UIColor lightGrayColor].CGColor, (id)[UIColor lightGrayColor].CGColor];
+        _progressView.colorArr = @[(id)[UIColor greenColor].CGColor, (id)[UIColor whiteColor].CGColor];
         _progressView.progress = 0.1;
         [self.view addSubview:_progressView];
     }
