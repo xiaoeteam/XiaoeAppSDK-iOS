@@ -7,26 +7,30 @@
 //
 
 #import "XEUIService.h"
-
-#define clientId @"883pzzGyzynE72G" // 小鹅通申请的 client ID
-#define appId @"app38itOR341547" // 店铺 ID
-#define secretKey @"dfomGwT7JRWWnzY3okZ6yTkHtgNPTyhr" // 小鹅通申请的秘钥
+#import "XEShopSDKDemoMaro.h"
 
 @implementation XEUIService
 
+/**
+获取登录态 token（仅作测试使用）
+注意：该登录态获取接口仅作为小鹅内嵌课堂SDK的官方Demo测试使用，
+   正式对接时，你应该请求贵方的APP服务端后台封装的正式登录态接口获取数据,
 
+@param openUID  APP登录用户唯一码
+@param completionBlock 回调
+*/
 + (void)loginWithOpenUid:(NSString *)openUID
          completionBlock:(void(^)(NSDictionary *info))completionBlock
 {
     
     NSDictionary *params = @{@"user_id" : openUID,
                             @"app_user_id": openUID,
-                            @"sdk_app_id": clientId,
-                            @"app_id": appId,
-                            @"secret_key": secretKey
+                            @"sdk_app_id": DefaultClientId,
+                            @"app_id": DefaultAppId,
+                            @"secret_key": DefaultSecretKey
     };
     
-    NSURLRequest *request = [self requestWithURLString:@"https://app38itOR341547.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0"
+    NSURLRequest *request = [self requestWithURLString:[NSString stringWithFormat:@"https://%@.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0",DefaultAppId]
                                             Parameters:params];
     [self sendRequest:request completionBlock:completionBlock];
     NSLog(@"url = %@", request.URL);
@@ -79,7 +83,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", urlString, queryString]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    [request setValue: @"app_id=app38itOR341547; sdk_app_id=KfeSEfFWTwTzfkE" forHTTPHeaderField: @"Cookie"];
+    [request setValue: [NSString stringWithFormat:@"app_id=%@; sdk_app_id=%@",DefaultAppId,DefaultClientId] forHTTPHeaderField: @"Cookie"];
     return request.copy;
 }
 
