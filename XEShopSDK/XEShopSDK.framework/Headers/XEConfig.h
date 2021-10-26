@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL enableLog;
 
+/**
+ 是否开启APP支付控制
+ */
+@property (nonatomic, assign, readonly) BOOL enableAppPayment;
+
 
 /**
  初始化配置
@@ -40,7 +45,21 @@ NS_ASSUME_NONNULL_BEGIN
  @param appId 从小鹅通申请的店铺 Id
  @return 配置实例
  */
-- (instancetype)initWithClientId: (NSString *)clientId appId: (NSString *)appId;
+- (instancetype)initWithClientId: (NSString *)clientId
+                           appId: (NSString *)appId;
+
+/**
+ 初始化配置
+ 
+ @param clientId 从小鹅通申请的 Client ID
+ @param appId 从小鹅通申请的店铺 Id
+ @param scheme 当前接入APP的唯一url scheme值
+ @return 配置实例
+ */
+- (instancetype)initWithClientId:(NSString *)clientId
+                           appId:(NSString *)appId
+                          scheme:(NSString *)scheme;
+
 
 @end
 

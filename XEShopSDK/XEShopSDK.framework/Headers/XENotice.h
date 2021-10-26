@@ -29,6 +29,7 @@ typedef NS_ENUM(NSUInteger, XENoticeType) {
     XENoticeTypeReady,
     XENoticeTypeTitleChange,
     XENoticeTypeOutLinkUrl,
+    XENoticeTypeAppPay
 };
 
 @interface XENotice : NSObject
