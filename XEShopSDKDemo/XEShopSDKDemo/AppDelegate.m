@@ -26,14 +26,16 @@
     [self.window makeKeyAndVisible];
     
     /* 以下为小鹅通内嵌店铺SDK初始化代码段 */
-    
-    // 创建配置 clientId 从小鹅通申请的 sdk 应用 Id， appId 从小鹅通申请的店铺 Id
-    XEConfig *config = [[XEConfig alloc] initWithClientId:DefaultClientId appId: DefaultAppId];
-    // 关闭 SDK 日志输出
-    config.enableLog = YES;
-    // 配置你app独立的 Scheme 以便微信支付完成后跳转返回
-    config.scheme = @"app-unique-scheme";
-    // 初始化SDK
+    /// clientId 从小鹅通申请的 Client ID
+    /// appId 从小鹅通申请的店铺 Id
+    /// scheme 当前接入APP的唯一url scheme值
+    /// enableAppPayment 是否开启APP支付控制 ，默认不开启；开启需要监控webview通知回调XENoticeTypeAppPay进行自主处理支付流程
+    /// enableLog 是否开启APP日志打印，默认不开启
+    XEConfig *config = [[XEConfig alloc] initWithClientId:DefaultClientId
+                                                    appId:DefaultAppId
+                                                   scheme:@"app-unique-scheme"
+                                         enableAppPayment:NO
+                                                enableLog:NO];
     [XESDK.shared initializeSDKWithConfig:config];
 
     return YES;

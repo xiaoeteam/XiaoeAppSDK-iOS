@@ -8,7 +8,7 @@ target 'XEShopSDKDemo' do
 
   # Pods for XEShopSDKDemo
     #引入小鹅内嵌课堂SDK
-    pod 'XEShopSDK','2.3.0-1.0.pre'
+    pod 'XEShopSDK','2.3.1'
     pod 'MBProgressHUD'
 
 end

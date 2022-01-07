@@ -60,6 +60,17 @@ NS_ASSUME_NONNULL_BEGIN
                            appId:(NSString *)appId
                           scheme:(NSString *)scheme;
 
+/// 初始化配置
+/// @param clientId 从小鹅通申请的 Client ID
+/// @param appId 从小鹅通申请的店铺 Id
+/// @param scheme 当前接入APP的唯一url scheme值
+/// @param enableAppPayment 是否开启APP支付控制 ，默认不开启
+/// @param enableLog 是否开启APP日志打印，默认不开启
+- (instancetype)initWithClientId:(NSString *)clientId
+                           appId: (NSString *)appId
+                          scheme:(NSString *)scheme
+                enableAppPayment:(BOOL)enableAppPayment
+                       enableLog:(BOOL)enableLog;
 
 @end
 

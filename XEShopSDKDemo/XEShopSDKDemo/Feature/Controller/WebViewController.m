@@ -147,6 +147,15 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             [self showAlertTitle:param[@"out_link_url"] content: nil];
         }
             break;
+        case XENoticeTypeAppPay:
+        {
+            //需要APP自行控制支付
+            NSDictionary *param = notice.response;
+            NSLog(@"待支付订单相关信息: %@", param);
+            [self showAlertTitle:@"APP支付操作" content: @"请对接相关支付API接口完成后续整体支付流程"];
+            
+        }
+            break;
         default:
             break;
     }
