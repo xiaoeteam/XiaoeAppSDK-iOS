@@ -2,11 +2,6 @@
 [![License](https://img.shields.io/cocoapods/l/PodDemo.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
 [![Platform](https://img.shields.io/cocoapods/p/PodDemo.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
 
-<p>
-<a href="https://github.com/xiaoeteam"><img alt="小鹅通logo" width="130px" src="https://www.xiaoe-tech.com/images/pageBase/xet_logo_2020.png" alt="xiaoe">
-</a>
-</p>
-
 
 ## 简述
 
