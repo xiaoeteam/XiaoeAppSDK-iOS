@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, XENoticeType) {
     XENoticeTypeShare,
     XENoticeTypeReady,
     XENoticeTypeTitleChange,
+    XENoticeTypeLoadProgressChange,
     XENoticeTypeOutLinkUrl,
     XENoticeTypeAppPay
 };

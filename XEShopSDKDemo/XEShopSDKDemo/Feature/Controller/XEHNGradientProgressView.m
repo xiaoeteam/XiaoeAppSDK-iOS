@@ -111,51 +111,17 @@ static NSString const *kFastFinishTimeInterval = @"0.1" ;
 
 //自动加载
 - (void)startLoad {
-    [self closeTimer];
-    __weak typeof(self) weakSelf = self;
     self.progress = 0.0;
-//    [self updateView];
     self.gradientLayer.bounds = CGRectMake(0, 0, 0, self.frame.size.height);
-   
-    
     [self addSubViewTree];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:kFastTimeInterval target:weakSelf selector:@selector(pathChanged:) userInfo:@{@"interval":@"0.02"} repeats:YES];
-    [NSRunLoop.mainRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
-    [self.timer fire];
-}
-
-- (void)pathChanged:(NSTimer *)timer {
-    NSDictionary *dic = (NSDictionary*)timer.userInfo;
-    NSString  *time = dic[@"interval" ];
-    CGFloat inter = [time floatValue];
-   
-    if (self.progress < 0.7) {
-       self.progress = _progress + inter;
-    }else{
-        self.progress = _progress + 0.002;
-    }
 }
 
 //自动加载完成
 - (void)finished{
-    [self closeTimer];
-    __weak typeof(self) weakSelf = self;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:kFastTimeInterval target:weakSelf selector:@selector(pathChanged:interval:) userInfo:@{@"interval":kFastFinishTimeInterval} repeats:YES];
-    [NSRunLoop.mainRunLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
-    [self.timer fire];
+    [self removeMyLayer];
+    self.progress = 0.0;
 }
 
-- (void)pathChanged:(NSTimer *)timer interval:(NSTimeInterval)interval{
-    NSDictionary *dic = (NSDictionary*)timer.userInfo;
-    NSString  *time = dic[@"interval" ];
-    CGFloat inter = [time floatValue];
-    
-    self.progress = _progress + inter;
-    if (self.progress > 1.5) {
-        [self closeTimer];
-        [self removeMyLayer];
-    }
-}
 
 - (void)removeMyLayer{
     [self.bgLayer removeFromSuperlayer];
@@ -164,14 +130,8 @@ static NSString const *kFastFinishTimeInterval = @"0.1" ;
 
 - (void)dealloc {
     //    NSLog(@"progressView dealloc");
-    [self closeTimer];
 }
 
-#pragma mark - private
-- (void)closeTimer {
-    [self.timer invalidate];
-    self.timer = nil;
-}
 
 
 @end

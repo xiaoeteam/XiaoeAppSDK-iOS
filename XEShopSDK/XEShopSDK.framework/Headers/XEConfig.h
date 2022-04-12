@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 屏蔽APP虚拟支付的商品类型typedef NS_OPTIONS(NSInteger, WpfPageActionType)
+typedef NS_OPTIONS(NSInteger, XEConfigDisableAppPaymentType) {
+    XEConfigDisableAppPaymentType_None = 0,
+    XEConfigDisableAppPaymentType_EntityGoods = 1 << 0,//实物商品
+};
+
 @interface XEConfig : NSObject
 
 /**
@@ -37,6 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly) BOOL enableAppPayment;
 
+
+/**
+ 如果enableAppPayment为YES，可通过该属性独立控制屏蔽相关类型的商品走虚拟支付
+ */
+@property (nonatomic, assign, readonly) XEConfigDisableAppPaymentType disableAppPaymentTypes;
 
 /**
  初始化配置
@@ -71,6 +82,21 @@ NS_ASSUME_NONNULL_BEGIN
                           scheme:(NSString *)scheme
                 enableAppPayment:(BOOL)enableAppPayment
                        enableLog:(BOOL)enableLog;
+
+
+/// 初始化配置
+/// @param clientId 从小鹅通申请的 Client ID
+/// @param appId 从小鹅通申请的店铺 Id
+/// @param scheme 当前接入APP的唯一url scheme值
+/// @param enableAppPayment 是否开启APP支付控制 ，默认不开启
+/// @param disableAppPaymentTypes 如果enableAppPayment为YES，可通过该属性独立控制屏蔽相关类型的商品走虚拟支付
+/// @param enableLog 是否开启APP日志打印，默认不开启
+- (instancetype)initWithClientId:(NSString *)clientId
+                           appId: (NSString *)appId
+                          scheme:(NSString *)scheme
+                enableAppPayment:(BOOL)enableAppPayment
+          disableAppPaymentTypes:(XEConfigDisableAppPaymentType)disableAppPaymentTypes
+enableLog:(BOOL)enableLog;
 
 @end
 

@@ -139,6 +139,21 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             }
         }
             break;
+        case XENoticeTypeLoadProgressChange: {
+            // 网页加载进度
+            NSDictionary *param = notice.response;
+            if ([param isKindOfClass:[NSDictionary class]] && [param[@"estimatedProgress"] isKindOfClass:[NSNumber class]]) {
+                CGFloat estimatedProgress = [param[@"estimatedProgress"] floatValue];
+                if (self.progressView.progress == 0) {
+                    [self.progressView startLoad];
+                }
+                [self.progressView setProgress:estimatedProgress];
+                if (estimatedProgress >= 1.0) {
+                    [self.progressView finished];
+                }
+            }
+        }
+            break;
         case XENoticeTypeOutLinkUrl:
         {
             // 外部链接回调，APP端按需处理，规则为带参数 needoutlink=1 的链接,例：https://xiaoe-tech.com/?needoutlink=1
@@ -171,17 +186,14 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 - (void)webViewDidStartLoad:(id<XEWebView>)webView
 {
-    [self.progressView startLoad];
 }
 
 - (void)webViewDidFinishLoad:(id<XEWebView>)webView
 {
-    [self.progressView finished];
 }
 
 - (void)webView:(id<XEWebView>)webView didFailLoadWithError:(NSError *)error
 {
-    [self.progressView finished];
 }
 
 - (void)webViewWebContentProcessDidTerminate:(id<XEWebView>)webView
@@ -355,10 +367,10 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (XEHNGradientProgressView *)progressView
 {
     if (!_progressView) {
-        _progressView = [[XEHNGradientProgressView alloc] initWithFrame:CGRectMake(0, [self kNavBarHeight], [UIScreen mainScreen].bounds.size.width, 3)];
+        _progressView = [[XEHNGradientProgressView alloc] initWithFrame:CGRectMake(0, [self kNavBarHeight], [UIScreen mainScreen].bounds.size.width, 2)];
         _progressView.bgProgressColor = [UIColor whiteColor];
-        _progressView.colorArr = @[(id)[UIColor greenColor].CGColor, (id)[UIColor whiteColor].CGColor];
-        _progressView.progress = 0.1;
+        _progressView.colorArr = @[(id)[UIColor redColor].CGColor, (id)[UIColor redColor].CGColor];
+        _progressView.progress = 0.0;
         [self.view addSubview:_progressView];
     }
     return _progressView;

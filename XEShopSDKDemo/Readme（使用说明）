@@ -1,0 +1,15 @@
+*****************************************
+		使用说明
+*****************************************
+
+1、Pod方式调用（推荐）
+
+（1）进入当前目录，删除已存在的Podfile.lock文件，重新执行pod install命令
+（2）打开生成好的XEShopSDKDemo.xcworkspace工程文件，直接Run当前Demo工程进行调试
+
+
+2、本地引入Framework方式调用
+
+（1）进入当前目录，打开XEShopSDKDemo.xcodeproj工程文件
+（2）点击工程文件目录XEShopSDKDemo，右键Add Files to “XEShopSDKDemo”，选择上层的XEShopSDK完整目录，把XEShopSDK.framework、XEShopSDK.bundle文件添加进工程
+（3）添加SDK文件完毕后，直接Run当前Demo工程进行调试
