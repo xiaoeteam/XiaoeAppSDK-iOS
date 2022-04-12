@@ -3,7 +3,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/PodDemo.svg?style=flat)](https://github.com/xiaoeteam/XiaoeAppSDK-iOS)
 
 <p>
-<a href="https://github.com/xiaoeteam"><img alt="小鹅通logo" width="130px" src="https://www.xiaoe-tech.com/images/pageBase/logo_blue@2x.png" alt="xiaoe">
+<a href="https://github.com/xiaoeteam"><img alt="小鹅通logo" width="130px" src="https://www.xiaoe-tech.com/images/pageBase/xet_logo_2020.png" alt="xiaoe">
 </a>
 </p>
 
