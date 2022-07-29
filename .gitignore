@@ -1,0 +1,14 @@
+# OS X
+.DS_Store
+*.xccheckout
+profile
+DerivedData
+*~
+*.lock
+Pods
+Pods/
+build/
+*.ipa
+xcuserdata  
+xcshareddata 
+UserInterfaceState.xcuserstate
