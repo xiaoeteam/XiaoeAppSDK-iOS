@@ -22,6 +22,13 @@
 
 https://github.com/xiaoeteam/XiaoeAppSDK-iOS/wiki
 
+## 小鹅云
+
+https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/tech_doc.html
+
+## 小鹅通官网
+
+https://www.xiaoe-tech.com/
 
 ## License
 

@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)webViewDidStartLoad:(id<XEWebView>)webView;
 - (void)webViewDidFinishLoad:(id<XEWebView>)webView;
+- (void)webviewDidCancelLoadInBlockList:(id<XEWebView>)webView url:(NSURL *)url;
+- (void)webviewDidCancelChallenge:(id<XEWebView>)webView result:(SecTrustResultType)challenge;
+- (void)webviewDidReciveChallenge:(id<XEWebView>)webView challenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 - (void)webView:(id<XEWebView>)webView didFailLoadWithError:(NSError *)error;
 @optional
 
