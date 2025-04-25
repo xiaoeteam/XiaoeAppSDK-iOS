@@ -43,6 +43,11 @@ typedef NS_OPTIONS(NSInteger, XEConfigDisableAppPaymentType) {
  */
 @property (nonatomic, assign, readonly) BOOL enableAppPayment;
 
+/**
+ 是否隐藏下单页优惠券入口
+ */
+@property (nonatomic, assign, readonly) BOOL hiddenOrderCoupon;
+
 
 /**
  如果enableAppPayment为YES，可通过该属性独立控制屏蔽相关类型的商品走虚拟支付
@@ -75,11 +80,23 @@ typedef NS_OPTIONS(NSInteger, XEConfigDisableAppPaymentType) {
 /// @param clientId 从小鹅通申请的 Client ID
 /// @param appId 从小鹅通申请的店铺 Id
 /// @param scheme 当前接入APP的唯一url scheme值
+/// @param hiddenCoupon 是否隐藏下单页优惠券入口
+- (instancetype)initWithClientId:(NSString *)clientId
+                           appId:(NSString *)appId
+                          scheme:(NSString *)scheme
+                    hiddenCoupon:(BOOL) hiddenCoupon;
+
+/// 初始化配置
+/// @param clientId 从小鹅通申请的 Client ID
+/// @param appId 从小鹅通申请的店铺 Id
+/// @param scheme 当前接入APP的唯一url scheme值
+/// @param hiddenCoupon 是否隐藏下单页优惠券入口
 /// @param enableAppPayment 是否开启APP支付控制 ，默认不开启
 /// @param enableLog 是否开启APP日志打印，默认不开启
 - (instancetype)initWithClientId:(NSString *)clientId
-                           appId: (NSString *)appId
+                           appId:(NSString *)appId
                           scheme:(NSString *)scheme
+                    hiddenCoupon:(BOOL) hiddenCoupon
                 enableAppPayment:(BOOL)enableAppPayment
                        enableLog:(BOOL)enableLog;
 
@@ -88,15 +105,17 @@ typedef NS_OPTIONS(NSInteger, XEConfigDisableAppPaymentType) {
 /// @param clientId 从小鹅通申请的 Client ID
 /// @param appId 从小鹅通申请的店铺 Id
 /// @param scheme 当前接入APP的唯一url scheme值
+/// @param hiddenCoupon 是否隐藏下单页优惠券入口
 /// @param enableAppPayment 是否开启APP支付控制 ，默认不开启
 /// @param disableAppPaymentTypes 如果enableAppPayment为YES，可通过该属性独立控制屏蔽相关类型的商品走虚拟支付
 /// @param enableLog 是否开启APP日志打印，默认不开启
 - (instancetype)initWithClientId:(NSString *)clientId
-                           appId: (NSString *)appId
+                           appId:(NSString *)appId
                           scheme:(NSString *)scheme
+                    hiddenCoupon:(BOOL) hiddenCoupon
                 enableAppPayment:(BOOL)enableAppPayment
           disableAppPaymentTypes:(XEConfigDisableAppPaymentType)disableAppPaymentTypes
-enableLog:(BOOL)enableLog;
+                       enableLog:(BOOL)enableLog;
 
 @end
 
