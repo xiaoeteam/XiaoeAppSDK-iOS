@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserModel : NSObject
 
-@property (nonatomic, copy, nullable) NSString *userId;
+//@property (nonatomic, copy, nullable) NSString *userId;
+@property (nonatomic, copy, nullable) NSString *token;
 
 + (instancetype)shared;
 

@@ -14,7 +14,6 @@
 
 #define DefaultClientId @"883pzzGyzynE72G" // 小鹅通申请的 client ID
 #define DefaultAppId @"app38itOR341547" // 店铺 ID
-#define DefaultSecretKey @"dfomGwT7JRWWnzY3okZ6yTkHtgNPTyhr" // 小鹅通申请的秘钥 ，正式对接时不能写在app客户端，避免私钥泄漏
 #define DefaultSourceUrl @"https://app38itOR341547.h5.xiaoeknow.com" //小鹅店铺首页链接
 
 #endif /* XEShopSDKDemoMaro_h */

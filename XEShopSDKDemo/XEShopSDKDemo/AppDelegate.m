@@ -36,6 +36,7 @@
     XEConfig *config = [[XEConfig alloc] initWithClientId:DefaultClientId
                                                     appId:DefaultAppId
                                                    scheme:@"app-unique-scheme"
+                                             hiddenCoupon:NO
                                          enableAppPayment:NO
                                    disableAppPaymentTypes:XEConfigDisableAppPaymentType_None
                                                 enableLog:YES];

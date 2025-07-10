@@ -27,7 +27,7 @@
                             @"app_user_id": openUID,
                             @"sdk_app_id": DefaultClientId,
                             @"app_id": DefaultAppId,
-                            @"secret_key": DefaultSecretKey
+//                            @"secret_key": DefaultSecretKey
     };
     
     NSURLRequest *request = [self requestWithURLString:[NSString stringWithFormat:@"https://%@.sdk.xiaoe-tech.com/sdk_api/xe.account.login.test/1.0.0",DefaultAppId]

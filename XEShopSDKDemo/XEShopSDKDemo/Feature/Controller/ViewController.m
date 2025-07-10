@@ -39,7 +39,7 @@
     
     [self setupTableView];
     
-    [self loginWithUserId:@"xiaoe"];
+//    [self loginWithUserId:@"xiaoe"];
     
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-150, self.view.frame.size.width, 100)];
@@ -63,9 +63,9 @@
 /**
  登录
 
- @param userId 用户 ID
+ @param token 用户 ID
  */
-- (void)loginWithUserId:(NSString *)userId
+- (void)loginWithSDKToken:(NSString *)token
 {
     /**
     获取登录态 token（仅作测试使用）
@@ -76,19 +76,22 @@
     @param completionBlock 回调
     */
     
-    UserModel.shared.userId = userId;
-    __weak typeof(self) weakSelf = self;
-    [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
-        if (resultInfo) {
-            
-            [XESDK.shared synchronizeCookieKey: resultInfo[@"data"][@"token_key"]
-                                     cookieValue:resultInfo[@"data"][@"token_value"]];
-            
-            [weakSelf updateBarItem];
-        } else {
-            [weakSelf showAlertTitle:@"登录失败" content: nil];
-        }
-    }];
+    UserModel.shared.token = token;
+    [XESDK.shared synchronizeCookieKey: @"ko_token"
+                           cookieValue: token];
+    [self updateBarItem];
+//    __weak typeof(self) weakSelf = self;
+//    [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
+//        if (resultInfo) {
+//            
+//            [XESDK.shared synchronizeCookieKey: resultInfo[@"data"][@"token_key"]
+//                                     cookieValue:resultInfo[@"data"][@"token_value"]];
+//            
+//            [weakSelf updateBarItem];
+//        } else {
+//            [weakSelf showAlertTitle:@"登录失败" content: nil];
+//        }
+//    }];
 }
 
 /**
@@ -100,7 +103,7 @@
     [XESDK.shared logout];
     
     // 退出登录
-    UserModel.shared.userId = nil;
+    UserModel.shared.token = nil;
     
     // 更新 BarItem
     [self updateBarItem];
@@ -137,9 +140,9 @@
 
  @return 用户 ID
  */
-- (NSString *)currentId
+- (NSString *)currentToken
 {
-    return [NSString stringWithFormat:@"ID:%@", UserModel.shared.userId];
+    return [NSString stringWithFormat:@"token:%@", UserModel.shared.token];
 }
 
 
@@ -148,8 +151,8 @@
  */
 - (void)updateBarItem
 {
-    if  (UserModel.shared.userId.length > 0) {
-        self.loginBarButton.title = [NSString stringWithFormat:@"ID:%@", UserModel.shared.userId];
+    if  (UserModel.shared.token.length > 0) {
+        self.loginBarButton.title = [NSString stringWithFormat:@"ID:%@", UserModel.shared.token];
         self.navigationItem.rightBarButtonItem = self.logoutBarButton;
     } else {
         self.loginBarButton.title = @"登录";
@@ -165,17 +168,18 @@
     __weak typeof(self) weakSelf = self;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"登录" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"请输入账号";
+        /// 登录态获取参考：https://api-doc.xiaoe-tech.com/recall_scene/lnline_sdk/sdk_login.html
+        textField.placeholder = @"请输入token(请从openAPI获取)";
         textField.tag = 0;
     }];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         // 登录
-        NSString *userId;
+        NSString *token;
         BOOL textFieldEmpty = NO;
         
         for (UITextField *textField in alertController.textFields) {
             if (textField.tag == 0) {
-                userId = textField.text;
+                token = textField.text;
             }
             if (textField.text.length == 0) {
                 textFieldEmpty = YES;
@@ -184,7 +188,7 @@
         
         if (!textFieldEmpty) {
             // 登录
-            [weakSelf loginWithUserId:userId];
+            [weakSelf loginWithSDKToken:token];
         }
     }];
     UIAlertAction *action_cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

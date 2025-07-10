@@ -236,7 +236,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #pragma mark - 以下为APP端自身业务处理 ，按需处理
 
 
-- (void)loginWithUserId:(NSString *)userId
+- (void)loginWithSDKToken:(NSString *)token
 {
     /**
     获取登录态 token（仅作测试使用）
@@ -247,16 +247,18 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     @param completionBlock 回调
     */
     
-    UserModel.shared.userId = userId;
-    __weak typeof(self) weakSelf = self;
-    [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
-        if (resultInfo) {
-            [XESDK.shared synchronizeCookieKey: resultInfo[@"data"][@"token_key"]
-                                     cookieValue:resultInfo[@"data"][@"token_value"]];
-        } else {
-            [weakSelf showAlertTitle:@"登录失败" content: nil];
-        }
-    }];
+    UserModel.shared.token = token;
+    [XESDK.shared synchronizeCookieKey: @"ko_token"
+                           cookieValue: token];
+//    __weak typeof(self) weakSelf = self;
+//    [XEUIService loginWithOpenUid:[UserModel shared].userId completionBlock:^(NSDictionary *resultInfo) {
+//        if (resultInfo) {
+//            [XESDK.shared synchronizeCookieKey: resultInfo[@"data"][@"token_key"]
+//                                     cookieValue:resultInfo[@"data"][@"token_value"]];
+//        } else {
+//            [weakSelf showAlertTitle:@"登录失败" content: nil];
+//        }
+//    }];
 }
 
 /// 分享弹窗
@@ -274,7 +276,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     __weak typeof(self) weakSelf = self;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"登录" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"请输入账号";
+        textField.placeholder = @"请输入token(请从openAPI获取)";
         textField.tag = 0;
     }];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
@@ -293,7 +295,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         
         if (!textFieldEmpty) {
             // 登录
-            [weakSelf loginWithUserId:userId];
+            [weakSelf loginWithSDKToken:userId];
         }
     }];
     UIAlertAction *action_cancel=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
