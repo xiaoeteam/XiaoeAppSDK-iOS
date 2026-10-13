@@ -12,3 +12,9 @@ build/
 xcuserdata  
 xcshareddata 
 UserInterfaceState.xcuserstate
+
+# Swift Package Manager
+.build/
+.swiftpm/
+.spm/
+Package.resolved
