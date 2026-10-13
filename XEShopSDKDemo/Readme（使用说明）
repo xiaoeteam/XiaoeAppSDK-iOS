@@ -7,6 +7,10 @@
 （1）进入当前目录，删除已存在的Podfile.lock文件，重新执行pod install命令
 （2）打开生成好的XEShopSDKDemo.xcworkspace工程文件，直接Run当前Demo工程进行调试
 
+说明：Demo的Podfile使用 pod 'XEShopSDK', :path => '../' 引用同仓的本地podspec，无需等待CocoaPods索引更新。
+外部接入方若2.3.16尚未发布到CocoaPods索引，请在Podfile中改用Git tag方式引用：
+pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'
+
 
 2、本地引入Framework方式调用
 

@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 # Uncomment the next line to define a global platform for your project
  platform :ios, '15.0'
 
@@ -7,10 +7,9 @@ target 'XEShopSDKDemo' do
   use_frameworks!
 
   # Pods for XEShopSDKDemo
-    #引入小鹅内嵌课堂SDK
-    pod 'XEShopSDK','2.3.16'
-#    pod 'XEShopSDK', :path => '../'
-    pod 'MBProgressHUD'
+    #引入小鹅内嵌课堂SDK（Demo 与 SDK 同仓，直接使用仓库根目录的本地 podspec）
+    pod 'XEShopSDK', :path => '../'
+#    pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'
+    # MBProgressHUD 在 Demo 源码中未被引用，已移除（如需使用可自行加回）
 
 end
-
