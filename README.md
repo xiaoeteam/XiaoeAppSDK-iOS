@@ -16,21 +16,21 @@
 
 ### 通过 CocoaPods 安装
 
-2.3.16 尚未发布到 CocoaPods 官方索引（trunk 当前最新版本为 2.3.15），请改用指定 Git tag 的方式引用：
-
 1. 在你的 Podfile 文件中添加：
 
 ```ruby
-pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'
+pod 'XEShopSDK','2.3.16'
 ```
 
 2. 删除已存在的 Podfile.lock 文件，在命令行中执行 `pod install`
 
 说明：
 
-- 该方式会克隆整个仓库（含历史版本二进制，约 120MB），首次安装较慢
-- 待 2.3.16 发布到 CocoaPods 后，可改回 `pod 'XEShopSDK','2.3.16'`
-- 若需继续使用支持 iOS 8.0 及以上的旧版本，可继续使用官方索引：`pod 'XEShopSDK','2.3.15'`
+- 2.3.16 需要 iOS 15.0 及以上、Xcode 27.0 及以上
+- 需要继续使用支持 iOS 8.0 及以上的旧版本时：`pod 'XEShopSDK','2.3.15'`
+- 如需直接从指定 Git tag 安装（例如使用尚未发布到索引的版本）：
+  `pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'`，
+  该方式会克隆整个仓库（约 120MB），首次安装较慢
 
 ### 手动导入
 

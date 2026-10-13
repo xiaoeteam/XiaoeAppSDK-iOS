@@ -8,7 +8,8 @@
 （2）打开生成好的XEShopSDKDemo.xcworkspace工程文件，直接Run当前Demo工程进行调试
 
 说明：Demo的Podfile使用 pod 'XEShopSDK', :path => '../' 引用同仓的本地podspec，无需等待CocoaPods索引更新。
-外部接入方若2.3.16尚未发布到CocoaPods索引，请在Podfile中改用Git tag方式引用：
+外部接入方请使用官方索引：pod 'XEShopSDK','2.3.16'
+如需直接引用指定Git tag（例如尚未发布到索引的版本）：
 pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'
 
 
