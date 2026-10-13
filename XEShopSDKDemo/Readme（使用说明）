@@ -11,5 +11,7 @@
 2、本地引入Framework方式调用
 
 （1）进入当前目录，打开XEShopSDKDemo.xcodeproj工程文件
-（2）点击工程文件目录XEShopSDKDemo，右键Add Files to “XEShopSDKDemo”，选择上层的XEShopSDK完整目录，把XEShopSDK.framework、XEShopSDK.bundle文件添加进工程
+（2）点击工程文件目录XEShopSDKDemo，右键Add Files to “XEShopSDKDemo”，选择上层的XEShopSDK完整目录，把XEShopSDK.xcframework、XEShopSDK.bundle文件添加进工程
 （3）添加SDK文件完毕后，直接Run当前Demo工程进行调试
+
+说明：自2.3.16起SDK改为xcframework分发，最低支持iOS 15.0，需使用Xcode 27.0及以上版本构建。
