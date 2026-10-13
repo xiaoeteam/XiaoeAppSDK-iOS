@@ -40,13 +40,13 @@ pod 'XEShopSDK','2.3.16'
 https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git
 ```
 
-版本规则选择 `Up to Next Major`（或指定不低于 `2.3.17`），添加后勾选 `XEShopSDK` 库产品。
+版本规则选择 `Up to Next Major`（或指定不低于 `2.3.16`），添加后勾选 `XEShopSDK` 库产品。
 
 或在 `Package.swift` 中声明：
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git", from: "2.3.17")
+    .package(url: "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git", from: "2.3.16")
 ],
 targets: [
     .target(
