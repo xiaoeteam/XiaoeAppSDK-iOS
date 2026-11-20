@@ -69,6 +69,10 @@ targets: [
 
 将 XEShopSDK 文件夹中的 `XEShopSDK.xcframework` 与 `XEShopSDK.bundle` 添加到你的 Xcode 工程中（SDK 为静态库，xcframework 无需 Embed）。
 
+## 发布流程
+
+维护者发布新版本（CocoaPods / Swift Package Manager 双渠道）请参考 [RELEASE.md](RELEASE.md)。
+
 ## 接入文档
 
 https://github.com/xiaoeteam/XiaoeAppSDK-iOS/wiki
