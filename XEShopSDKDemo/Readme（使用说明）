@@ -8,9 +8,9 @@
 （2）打开生成好的XEShopSDKDemo.xcworkspace工程文件，直接Run当前Demo工程进行调试
 
 说明：Demo的Podfile使用 pod 'XEShopSDK', :path => '../' 引用同仓的本地podspec，无需等待CocoaPods索引更新。
-外部接入方请使用官方索引：pod 'XEShopSDK','2.3.16'
+外部接入方请使用官方索引：pod 'XEShopSDK','2.3.17'
 如需直接引用指定Git tag（例如尚未发布到索引的版本）：
-pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'
+pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.17'
 
 
 2、本地引入Framework方式调用
@@ -19,4 +19,4 @@ pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :ta
 （2）点击工程文件目录XEShopSDKDemo，右键Add Files to “XEShopSDKDemo”，选择上层的XEShopSDK完整目录，把XEShopSDK.xcframework、XEShopSDK.bundle文件添加进工程
 （3）添加SDK文件完毕后，直接Run当前Demo工程进行调试
 
-说明：自2.3.16起SDK改为xcframework分发，最低支持iOS 15.0，需使用Xcode 27.0及以上版本构建。
+说明：自2.3.17起SDK改为xcframework分发，最低支持iOS 15.0，需使用Xcode 27.0及以上版本构建。

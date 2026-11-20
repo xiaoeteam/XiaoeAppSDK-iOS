@@ -58,6 +58,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)logout;
 
+/**
+ 通用只读能力：返回当前登录态 token 值；未登录返回 nil。
+ 仅新增读取，不改变任何既有行为。
+ */
+@property (nonatomic, readonly, nullable) NSString *currentTokenValue;
+
 
 /**
  恢复SDK容器配置，对于出现页面跳转异常等情况可在每次进入容器时调用。

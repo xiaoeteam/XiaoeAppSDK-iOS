@@ -19,17 +19,17 @@
 1. 在你的 Podfile 文件中添加：
 
 ```ruby
-pod 'XEShopSDK','2.3.16'
+pod 'XEShopSDK','2.3.17'
 ```
 
 2. 删除已存在的 Podfile.lock 文件，在命令行中执行 `pod install`
 
 说明：
 
-- 2.3.16 需要 iOS 15.0 及以上、Xcode 27.0 及以上
+- 2.3.17 需要 iOS 15.0 及以上、Xcode 27.0 及以上
 - 需要继续使用支持 iOS 8.0 及以上的旧版本时：`pod 'XEShopSDK','2.3.15'`
 - 如需直接从指定 Git tag 安装（例如使用尚未发布到索引的版本）：
-  `pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.16'`，
+  `pod 'XEShopSDK', :git => 'https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git', :tag => '2.3.17'`，
   该方式会克隆整个仓库（约 120MB），首次安装较慢
 
 ### 通过 Swift Package Manager 安装
@@ -40,13 +40,13 @@ pod 'XEShopSDK','2.3.16'
 https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git
 ```
 
-版本规则选择 `Up to Next Major`（或指定不低于 `2.3.16`），添加后勾选 `XEShopSDK` 库产品。
+版本规则选择 `Up to Next Major`（或指定不低于 `2.3.17`），添加后勾选 `XEShopSDK` 库产品。
 
 或在 `Package.swift` 中声明：
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git", from: "2.3.16")
+    .package(url: "https://github.com/xiaoeteam/XiaoeAppSDK-iOS.git", from: "2.3.17")
 ],
 targets: [
     .target(
